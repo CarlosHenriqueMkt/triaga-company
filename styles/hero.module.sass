@@ -1,0 +1,51 @@
+.heroContainer 
+    display: flex
+    flex-direction: column-reverse
+    width: 95vw
+    margin: 30px auto
+    
+    @media (min-width: 768px) 
+        display: flex
+        flex-direction: row
+        align-items: center
+        padding: 25px
+    
+    @media (min-width: 1024px)
+        h1
+            font-size: 36px
+        p, a  
+            font-size: 22px
+        button
+            padding: 26px
+    
+    @media (min-width: 1440px)
+        h1
+            font-size: 50px
+        p
+            font-size: 32px
+        button
+            padding: 30px
+    @media (min-width: 2560px)
+        h1
+            font-size: 100px
+        p, a
+            font-size: 50px
+        button
+            padding: 60px
+
+.heroBoxes 
+    display: flex
+    flex-basis: 50%
+    flex-direction: column
+
+    justify-content: center
+    align-items: center
+    text-align: center
+
+    margin: 15px auto
+    
+
+.lottie
+    width: 100%
+    height: auto
+    
