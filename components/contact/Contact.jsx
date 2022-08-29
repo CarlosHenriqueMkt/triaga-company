@@ -143,14 +143,9 @@ export default function Contact() {
 							colorScheme="whatsapp"
 							onClick={handleSendMsg}
 							alignContent="center"
-							fontSize={{
-								base: "16px",
-								xl: "30px",
-							}}
-							gap="5px"
+							fontSize="20px"
 						>
-							<FaWhatsapp size={{ base: "25px", xl: "30px" }} />{" "}
-							Enviar
+							<FaWhatsapp fontSize="30px" /> Enviar
 						</Button>
 					</Box>
 				</Box>
