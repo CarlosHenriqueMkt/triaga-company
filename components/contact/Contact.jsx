@@ -29,7 +29,7 @@ export default function Contact() {
 		msg: isClicked?.msg ? input?.msg?.length < 10 : false,
 	};
 
-	const dynamicLink = `https://api.whatsapp.com/send?phone=+34697899495&text=Olá%2C vim pelo seu site e estou interessado nos seus serviços.%0AMe chamo ${
+	const dynamicLink = `https://api.whatsapp.com/send?phone=+557996491745&text=Olá%2C vim pelo site e tenho interesse nos serviços da Triaga.%0AMe chamo ${
 		input?.name
 	}.${!!input?.msg ? `%0A%0A${encodeURI(input.msg)}%0A` : ""}`;
 
@@ -46,13 +46,33 @@ export default function Contact() {
 			marginBottom="50px"
 		>
 			<Box textAlign="center" padding="12px 0" marginBottom="32px">
-				<Text as="h2" textAlign="center" fontSize="3xl">
+				<Text
+					as="h2"
+					textAlign="center"
+					fontSize={{
+						base: "30px",
+						md: "45px",
+						lg: "55px",
+						xl: "80px",
+					}}
+				>
 					Entre em contato!
 				</Text>
-				<Text as="p" margin="8px 0 16px" textAlign="center">
+				<Text
+					as="p"
+					margin="8px 0 16px"
+					textAlign="center"
+					fontSize={{
+						base: "16px",
+						md: "25px",
+						lg: "32px",
+						xl: "40px",
+					}}
+					fontWeight="300"
+				>
 					Se preferir entrar em contato via email:
 					<br />
-					<Link as="a" href="mailto:thaisinha.ib@gmail.com">
+					<Link as="a" href="mailto:contato@triagacompany.com.br">
 						contato@triagacompany.com.br
 					</Link>
 				</Text>
@@ -63,9 +83,17 @@ export default function Contact() {
 				justifyContent="center"
 				padding="0 12px"
 			>
-				<Box width="500px">
+				<Box width={{ base: "500px", lg: "800px" }}>
 					<FormControl isInvalid={isError?.name} isRequired>
-						<FormLabel htmlFor="name">Nome</FormLabel>
+						<FormLabel
+							htmlFor="name"
+							fontSize={{
+								base: "16px",
+								xl: "30px",
+							}}
+						>
+							Nome
+						</FormLabel>
 						<Input
 							id="name"
 							type="text"
@@ -73,6 +101,7 @@ export default function Contact() {
 							onChange={(e) => handleInputChange(e, "name")}
 							onClick={() => handleInputClicked("name")}
 							placeholder="Digite seu nome"
+							size="lg"
 						/>
 						{isError && (
 							<FormErrorMessage>
@@ -85,13 +114,21 @@ export default function Contact() {
 						isInvalid={isError?.msg}
 						isRequired
 					>
-						<FormLabel htmlFor="msg">Mensagem</FormLabel>
+						<FormLabel
+							htmlFor="msg"
+							fontSize={{
+								base: "16px",
+								xl: "30px",
+							}}
+						>
+							Mensagem
+						</FormLabel>
 						<Textarea
 							id="msg"
 							value={input?.msg}
 							onChange={(e) => handleInputChange(e, "msg")}
 							placeholder="Coloque aqui sua mensagem"
-							size="sm"
+							size="lg"
 						/>
 					</FormControl>
 					<Box
@@ -101,12 +138,19 @@ export default function Contact() {
 					>
 						<Button
 							width="150px"
+							height="60px"
 							color="white"
 							colorScheme="whatsapp"
 							onClick={handleSendMsg}
 							alignContent="center"
+							fontSize={{
+								base: "16px",
+								xl: "30px",
+							}}
+							gap="5px"
 						>
-							<FaWhatsapp size="25px" /> Enviar
+							<FaWhatsapp size={{ base: "25px", xl: "30px" }} />{" "}
+							Enviar
 						</Button>
 					</Box>
 				</Box>

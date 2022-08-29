@@ -8,7 +8,7 @@ import logo from "../../public/logo-gbps.png";
 export const Header = () => {
 	return (
 		<header>
-			<Box className={styles.container}>
+			<Box className={styles.container} id="header">
 				<Box className={styles.logoContainer}>
 					<Image src={logo} alt="Triaga Company" />
 				</Box>
