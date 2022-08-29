@@ -45,7 +45,12 @@ export default function Contact() {
 			marginTop="100px"
 			marginBottom="50px"
 		>
-			<Box textAlign="center" padding="12px 0" marginBottom="32px">
+			<Box
+				textAlign="center"
+				padding="12px 0"
+				marginBottom="32px"
+				id="#contact"
+			>
 				<Text
 					as="h2"
 					textAlign="center"
