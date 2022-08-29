@@ -26,8 +26,8 @@ export default function MenuLinks() {
 				</Link>
 			</Box>
 			<Box marginTop={{ base: "10px", md: "0" }}>
-				<Link className={styles.navLink} href="#blog">
-					Blog
+				<Link className={styles.navLink} href="#contact">
+					Contato
 				</Link>
 			</Box>
 		</>
